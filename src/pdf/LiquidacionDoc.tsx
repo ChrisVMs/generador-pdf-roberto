@@ -93,10 +93,10 @@ export function LiquidacionDoc({ values: v, logoSrc }: { values: FormValues; log
         <P x={36} y={pesoLabelY[2]} font="timesB">PESO BRUTO SECO :</P>
         <P x={36} y={pesoLabelY[3]} font="timesB">MERMA         %</P>
         <P x={36} y={pesoLabelY[4]} font="timesB">PESO NETO SECO :</P>
-        <P x={195.9} y={pesoNumY[1]} size={SZN} align="right">{num(n("humedadPct"), 3)}</P>
-        <P x={195.9} y={pesoNumY[3]} size={SZN} align="right">{num(n("mermaPct"), 3)}</P>
+        <P x={197.9} y={pesoNumY[1]} size={SZN} align="right">{num(n("humedadPct"), 3)}</P>
+        <P x={197.9} y={pesoNumY[3]} size={SZN} align="right">{num(n("mermaPct"), 3)}</P>
         {pesoRows.map(([unit, val], i) => (
-          <P key={`p${i}`} x={297.8} y={pesoNumY[i]} size={SZN} align="right">{num(val, 3)}</P>
+          <P key={`p${i}`} x={299.85} y={pesoNumY[i]} size={SZN} align="right">{num(val, 3)}</P>
         ))}
         {pesoRows.map(([unit], i) => (
           <P key={`pu${i}`} x={318} y={pesoLabelY[i]} font="timesB">{unit}</P>
@@ -105,21 +105,21 @@ export function LiquidacionDoc({ values: v, logoSrc }: { values: FormValues; log
         <P x={432} y={162.885} font="timesB" color={BLUE}>LEYES </P>
         <P x={436.5} y={174.065} font="helvB" size={SZ_XS}>AU</P>
         <P x={489} y={173.805} size={SZN}>OZ/TM</P>
-        <P x={568.9} y={173.805} size={SZN} align="right">{num(n("leyAu"), 3)}</P>
+        <P x={570.9} y={173.805} size={SZN} align="right">{num(n("leyAu"), 3)}</P>
         <P x={436.5} y={185.115} font="helvB" size={SZ_XS}>AG</P>
         <P x={489} y={184.855} size={SZN}>OZ/TM</P>
-        <P x={568.9} y={184.855} size={SZN} align="right">{num(n("leyAg"), 3)}</P>
+        <P x={570.9} y={184.855} size={SZN} align="right">{num(n("leyAg"), 3)}</P>
         <P x={432} y={198.885} font="timesB" color={BLUE}>COTIZACIONES </P>
         <P x={436.5} y={210.065} font="helvB" size={SZ_XS}>AU</P>
         <P x={488.25} y={209.805} size={SZN}>USD/OZ</P>
-        <P x={569.3} y={209.805} size={SZN} align="right">{num(n("cotAu"), 3)}</P>
+        <P x={571.3} y={209.805} size={SZN} align="right">{num(n("cotAu"), 3)}</P>
         <P x={436.5} y={221.115} font="helvB" size={SZ_XS}>AG</P>
         <P x={488.25} y={220.855} size={SZN}>USD/OZ</P>
-        <P x={569.3} y={220.855} size={SZN} align="right">{num(n("cotAg"), 3)}</P>
+        <P x={571.35} y={220.855} size={SZN} align="right">{num(n("cotAg"), 3)}</P>
         <P x={432} y={234.885} font="timesB" color={BLUE}>P.U.TM.</P>
-        <P x={567.9} y={233.805} size={SZN} align="right">{num(n("putm"), 2)}</P>
+        <P x={569.9} y={233.805} size={SZN} align="right">{num(n("putm"), 2)}</P>
         <P x={432} y={246.885} font="timesB">TIPO CAMBIO :</P>
-        <P x={567.9} y={245.805} size={SZN} align="right">{num(n("tipoCambio"), 3)}</P>
+        <P x={569.9} y={245.805} size={SZN} align="right">{num(n("tipoCambio"), 3)}</P>
 
         <P x={24} y={247.11} font="timesB" size={8.8}>VALORIZACIÓN DE MINERAL:</P>
 
@@ -136,9 +136,9 @@ export function LiquidacionDoc({ values: v, logoSrc }: { values: FormValues; log
           name="ORO (AU)"
           nameFont="helv" nameSize={SZN}
           valueFont="helv" valueSize={SZN}
-          ozFont="helv" ozSize={OZ}
-          pns={c.pns} pnsX={152.8} ley={n("leyAu")} leyX={247.9} rec={n("recAu")} recX={307.8}
-          oz={c.auOz} ozX={382.7} ozY={281.375} cot={n("cotAu")} cotX={495.8} usd={c.auUsd} usdX={567.8}
+          ozFont="helv" ozSize={SZN}
+          pns={c.pns} pnsX={154.85} ley={n("leyAu")} leyX={249.88} rec={n("recAu")} recX={309.85}
+          oz={c.auOz} ozX={384.63} ozY={281.375} cot={n("cotAu")} cotX={497.82} usd={c.auUsd} usdX={569.83}
           markY={283.925} markFont="helvB" markSize={OZ}
         />
         <Row
@@ -146,60 +146,60 @@ export function LiquidacionDoc({ values: v, logoSrc }: { values: FormValues; log
           name="PLATA(AG)"
           nameFont="helv" nameSize={SZN}
           valueFont="helv" valueSize={SZN}
-          ozFont="helv" ozSize={OZ}
-          pns={c.pns} pnsX={157.7} ley={n("leyAg")} leyX={251.9} rec={n("recAg")} recX={312.7}
-          oz={c.agOz} ozX={386.7} ozY={292.675} cot={n("cotAg")} cotX={500.7} usd={c.agUsd} usdX={571.9}
+          ozFont="helv" ozSize={SZN}
+          pns={c.pns} pnsX={154.85} ley={n("leyAg")} leyX={249.88} rec={n("recAg")} recX={309.85}
+          oz={c.agOz} ozX={384.63} ozY={292.675} cot={n("cotAg")} cotX={497.82} usd={c.agUsd} usdX={569.83}
           markY={295.225} markFont="helvB" markSize={OZ}
         />
 
         <HLine x1={504} x2={570} y={305.9} w={1} />
         <P x={30} y={311.535} font="timesB">VALORIZACION TOTAL  ( USD )</P>
-        <P x={568.15} y={311.1} font="helvB" size={SZ_XS} align="right">{num(c.valorizacion, 2)}</P>
+        <P x={570.05} y={311.1} font="helvB" size={SZ_XS} align="right">{num(c.valorizacion, 2)}</P>
         <HLine x1={504} x2={570} y={317.9} w={1} />
         <HLine x1={504} x2={570} y={323.9} w={1} />
 
         <P x={30} y={323.535} font="timesB">DEDUCCIONES     ( USD )</P>
         <P x={198} y={329.535} font="times" color={BLUE}>MANIPULEO  </P>
-        <P x={327.9} y={328.455} size={SZN} align="right">{num(n("manipuleo"), 2)}</P>
+        <P x={329.9} y={328.455} size={SZN} align="right">{num(n("manipuleo"), 2)}</P>
         <Mark x={344.3} y={330.525} ch="*" />
-        <P x={393.9} y={328.455} size={SZN} align="right">{num(n("pbh"), 2)}</P>
+        <P x={395.9} y={328.455} size={SZN} align="right">{num(n("pbh"), 2)}</P>
         <Mark x={410.95} y={331.455} font="timesB" size={10.65} ch="=" />
-        <P x={471.9} y={328.455} size={SZN} align="right">{num(c.manipuleo, 2)}</P>
+        <P x={473.9} y={328.455} size={SZN} align="right">{num(c.manipuleo, 2)}</P>
 
         <P x={198} y={341.535} font="times" color={BLUE}>MAQUILA</P>
-        <P x={327.8} y={340.455} size={SZN} align="right">{num(n("maquila"), 2)}</P>
+        <P x={329.85} y={340.455} size={SZN} align="right">{num(n("maquila"), 2)}</P>
         <Mark x={344.3} y={342.525} ch="*" />
-        <P x={393.9} y={340.455} size={SZN} align="right">{num(c.pbs, 2)}</P>
+        <P x={395.9} y={340.455} size={SZN} align="right">{num(c.pbs, 2)}</P>
         <Mark x={410.95} y={343.455} font="timesB" size={10.65} ch="=" />
-        <P x={471.8} y={340.455} size={SZN} align="right">{num(c.maquila, 2)}</P>
-        <P x={567.8} y={340.455} size={SZN} align="right">{num(c.deducciones, 2)}</P>
+        <P x={473.85} y={340.455} size={SZN} align="right">{num(c.maquila, 2)}</P>
+        <P x={569.85} y={340.455} size={SZN} align="right">{num(c.deducciones, 2)}</P>
 
         <P x={198} y={359.535} font="times" color={BLUE}>D.S. 180/181-2011-EF</P>
-        <P x={392.6} y={358.455} size={SZN} align="right">{num(n("dsPct"), 2)}</P>
+        <P x={389.9} y={358.455} size={SZN} align="right">{num(n("dsPct"), 2)}</P>
         <P x={396} y={359.535} size={SZN}>%</P>
         <Mark x={410.95} y={361.455} font="timesB" size={10.65} ch="=" />
-        <P x={572.6} y={358.455} size={SZN} align="right" color={BLUE}>{num(c.ds, 2)}</P>
+        <P x={569.9} y={358.455} size={SZN} align="right" color={BLUE}>{num(c.ds, 2)}</P>
 
         <P x={198} y={371.535} font="times" color={BLUE}>CONCESION MINERA</P>
-        <P x={395.3} y={370.455} size={SZN} align="right">{num(n("concesionPct"), 4)}</P>
+        <P x={389.9} y={370.455} size={SZN} align="right">{num(n("concesionPct"), 4)}</P>
         <P x={396} y={371.535} size={SZN}>%</P>
         <Mark x={410.95} y={373.455} font="timesB" size={10.65} ch="=" />
-        <P x={572.6} y={370.455} size={SZN} align="right" color={BLUE}>{num(c.concesion, 2)}</P>
+        <P x={569.9} y={370.455} size={SZN} align="right" color={BLUE}>{num(c.concesion, 2)}</P>
 
         <P x={30} y={383.535} font="timesB">TOTAL ANTES DE LA PARTICIPACION</P>
-        <P x={568.15} y={382.715} font="helvB" size={SZ_XS} align="right" color={BLUE}>{num(c.totalAntes, 2)}</P>
+        <P x={570.05} y={382.715} font="helvB" size={SZ_XS} align="right" color={BLUE}>{num(c.totalAntes, 2)}</P>
         <P x={30} y={395.535} font="timesB">PARTICIPACION MINERO</P>
-        <P x={252} y={395.07} size={8.1} align="right">{num(n("participacionPct"), 2)}</P>
+        <P x={254.25} y={395.07} size={8.1} align="right">{num(n("participacionPct"), 2)}</P>
         <P x={264} y={395.535} font="timesB">%</P>
-        <P x={567.8} y={394.455} size={SZN} align="right" color={BLUE}>{num(c.participacion, 2)}</P>
+        <P x={569.8} y={394.455} size={SZN} align="right" color={BLUE}>{num(c.participacion, 2)}</P>
         <P x={30} y={407.535} font="timesB">CASTIGO PROVISIONAL</P>
-        <P x={252} y={407.07} size={8.1} align="right">{num(n("castigoPct"), 2)}</P>
+        <P x={254.25} y={407.07} size={8.1} align="right">{num(n("castigoPct"), 2)}</P>
         <P x={264} y={407.535} font="timesB">%</P>
-        <P x={567.9} y={406.455} size={SZN} align="right" color={BLUE}>{num(c.castigo, 2)}</P>
+        <P x={569.9} y={406.455} size={SZN} align="right" color={BLUE}>{num(c.castigo, 2)}</P>
         <P x={30} y={420.015} font="timesB" size={7.95} color={RED}>
           DESCUENTO POR LIQ. ANTERIOR ( Solo en caso de Regularizaciones )
         </P>
-        <P x={567.7} y={419.07} size={8.1} align="right" color={RED}>{num(n("descuentoLiq"), 2)}</P>
+        <P x={570} y={419.07} size={8.1} align="right" color={RED}>{num(n("descuentoLiq"), 2)}</P>
         <HLine x1={30} x2={582.75} y={432.4} w={2} />
       </Page>
 
@@ -221,35 +221,35 @@ export function LiquidacionDoc({ values: v, logoSrc }: { values: FormValues; log
         ))}
 
         <P x={42} y={139.435} font="timesB">TOTAL  OTRAS DEDUCCIONES</P>
-        <P x={567.3} y={138.485} font="timesB" align="right">{num(c.otrasTotal, 2)}</P>
-        <HLine x1={21} x2={579} y={143.5} w={1} />
+        <P x={569.15} y={138.485} font="timesB" align="right">{num(c.otrasTotal, 2)}</P>
+        <HLine x1={21} x2={579} y={139.75} w={1} />
 
         <P x={48} y={150.885} font="times">VALOR DE VENTA  </P>
         <P x={482.6} y={151.065} font="times" size={8.95}>$.</P>
-        <P x={574.1} y={149.935} font="timesB" align="right">{num(c.valorVenta, 2)}</P>
+        <P x={575.85} y={149.935} font="timesB" align="right">{num(c.valorVenta, 2)}</P>
         <P x={48} y={168.885} font="times">ANTICIPO POR LIQUIDACION PROVISIONA</P>
-        <P x={574.1} y={167.935} font="timesB" align="right">{num(n("anticipo"), 2)}</P>
+        <P x={575.9} y={167.935} font="timesB" align="right">{num(n("anticipo"), 2)}</P>
         <P x={48} y={186.885} font="times">VALOR DE VENTA  FINAL</P>
         <P x={234} y={185.805} size={SZN} color={RED}>Nota : Generar Nota de Credito</P>
-        <P x={574.1} y={185.935} font="timesB" align="right">{num(c.valorVentaFinal, 2)}</P>
+        <P x={575.85} y={185.935} font="timesB" align="right">{num(c.valorVentaFinal, 2)}</P>
         <P x={48} y={198.885} font="times">I.G.V.</P>
         <P x={90.35} y={198.065} font="helvB" size={SZ_XS}>{num(n("igvPct"), 2)}</P>
         <P x={114} y={198.885} font="timesB">%</P>
-        <P x={574.1} y={197.935} font="timesB" align="right">{num(c.igv, 2)}</P>
+        <P x={575.85} y={197.935} font="timesB" align="right">{num(c.igv, 2)}</P>
         <P x={48} y={217.365} font="timesB" size={7.95}>TOTAL A FACTURAR</P>
         <P x={156} y={215.805} size={SZN}>{numeroALetras(c.totalFacturar)}</P>
-        <P x={574.1} y={215.935} font="timesB" align="right">{num(c.totalFacturar, 2)}</P>
+        <P x={575.8} y={215.935} font="timesB" align="right">{num(c.totalFacturar, 2)}</P>
         <HLine x1={21} x2={579} y={223.25} w={1} />
 
         <P x={48} y={231.375} font="helvB" size={OZ}>Otros Descuentos :</P>
         <P x={42} y={241.355} size={SZN}>CU</P>
         <P x={84} y={241.355} size={SZN}>CESION EN USO</P>
-        <P x={351.9} y={240.605} size={SZN} align="right">{num(n("cuPct"), 2)}</P>
+        <P x={353.9} y={240.605} size={SZN} align="right">{num(n("cuPct"), 2)}</P>
         <P x={359.8} y={240.605} size={SZN}>%</P>
         <P x={420} y={241.355} size={SZN}>{num(c.cu, 2)}</P>
 
         <P x={42} y={259.365} font="timesB" size={7.95}>NETO A PAGAR</P>
-        <P x={573.8} y={258.565} font="timesB" size={7.95} align="right">{num(c.neto, 2)}</P>
+        <P x={575.8} y={258.565} font="timesB" size={7.95} align="right">{num(c.neto, 2)}</P>
 
         <HLine x1={468} x2={589} y={283.25} w={1} />
         <P x={496} y={288.885} font="times">RECIBI CONFORME</P>
@@ -309,12 +309,12 @@ function OtraDeduccion({ top, label, unidad, precio, cant, importe }: {
   return (
     <>
       <P x={45} y={y} font="times" color={BLUE}>{label}</P>
-      <P x={330.4} y={y} font="times" align="right">{num(precio, 2)}</P>
+      <P x={332.17} y={y} font="times" align="right">{num(precio, 2)}</P>
       <Mark x={345.75} y={top - 0.785} font="times" size={8.95} ch="*" />
-      <P x={375.4} y={y} font="times" align="right">{num(cant, 2)}</P>
+      <P x={377.2} y={y} font="times" align="right">{num(cant, 2)}</P>
       {unidad ? <P x={381} y={top - 2.045} size={SZN}>{unidad}</P> : null}
       <Mark x={414.5} y={top - 0.74} font="timesB" size={8.8} ch="=" />
-      <P x={473} y={y} font="times" align="right">{num(importe, 2)}</P>
+      <P x={474.67} y={y} font="times" align="right">{num(importe, 2)}</P>
     </>
   );
 }
